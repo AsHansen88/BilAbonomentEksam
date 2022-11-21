@@ -18,7 +18,7 @@ public class LejeAftale {
     List<BilModel> bil = new ArrayList<>();
 
     try{
-      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil");
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.Lejeaftaler");
       ResultSet resultSet = psts.executeQuery();
 
       while(resultSet.next()){
@@ -36,7 +36,7 @@ public class LejeAftale {
 
   public BilModel getBil(int id){
     try {
-      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil WHERE id =?");
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.Lejeaftaler WHERE id =?");
       psts.setInt(1,id);
       ResultSet resultSet = psts.executeQuery();
     }catch (SQLException e){
@@ -48,7 +48,7 @@ public class LejeAftale {
 
   public void createBil(BilModel bil){
     try{
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil (id,name) VALUES (?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.lejeaftaler (id,name) VALUES (?,?)");
       psts.setInt(1,bil.getVognnummer());
       psts.setInt(2, bil.getStelnummer());
       psts.executeUpdate();
