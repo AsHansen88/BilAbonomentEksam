@@ -10,7 +10,8 @@ CREATE TABLE Lejeaftaler{
     udlejningsDato VARCHAR(50),
     udlejningsPeriode VARCHAR(50),
     vilkår VARCHAR(50),
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
+    FOREIGN KEY(vognummer) REFERENCES ListeAfBiler(vognnummer)
 };
 
 CREATE TABLE ListAfBiler{
@@ -22,6 +23,6 @@ CREATE TABLE ListAfBiler{
     stålpris DOUBLE,
     reg_afgidt DOUBLE,
     co2_udlidning DOUBLE,
-    PRIMARY KEY(vognnummer),
+    PRIMARY KEY(vognnummer)
 };
 
