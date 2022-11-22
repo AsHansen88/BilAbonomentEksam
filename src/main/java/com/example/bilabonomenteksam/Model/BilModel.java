@@ -26,6 +26,9 @@ public class BilModel {
   public BilModel(int id, String indregistrering) {
   }
 
+  public BilModel(String vognnummer) {
+  }
+
 
   public int getVognnummer() {
     return vognnummer;

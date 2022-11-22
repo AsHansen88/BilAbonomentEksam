@@ -23,12 +23,10 @@ CREATE TABLE ListAfBiler
     model         VARCHAR(50),
     udstyrnivue   INT,
     stålpris      DOUBLE,
-    reg_afgidt    DOUBLE,
     co2_udlidning DOUBLE,
     reg_afgift int not null,
     PRIMARY KEY (vognnummer)
 );
-
 
 INSERT INTO ListAfBiler(vognnummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgift,co2_udlidning) VALUES(1,1111,'Citroen','C5 X',5,58000,23000,345);
 INSERT INTO ListAfBiler(vognnummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgift,co2_udlidning) VALUES(2,1222,'Ford','Ford Mustang',8,230000,40000,567);

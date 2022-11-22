@@ -13,9 +13,6 @@ public class Carliste {
 
   private Connection conn = DBConnect.getConnection();
 
-  List<Carliste> ListOfCars = new ArrayList<>();
-
-
 
   public List<BilModel> getAllBil(){
 
