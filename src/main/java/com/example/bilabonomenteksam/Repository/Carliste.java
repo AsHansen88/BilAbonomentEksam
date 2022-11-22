@@ -31,7 +31,7 @@ public class Carliste {
             resultSet.getInt("Stelnummer"),
             resultSet.getString("Mærke"),
             resultSet.getString("Model"),
-            resultSet.getString("Udstyrsniveau"),
+            resultSet.getInt("Udstyrsniveau"),
             resultSet.getDouble("stålpris"),
             resultSet.getDouble("reg_afgift"),
             resultSet.getDouble("co2_udledning")

@@ -6,13 +6,13 @@ public class BilModel {
   private int stelnummer;
   private String mærke;
   private String model;
-  private String udstyrsniveau;
+  private int udstyrsniveau;
   private double Stålpris;
   private double reg_afgift;
   private double co2_udledning;
 
 
-  public BilModel(int vognnummer, int stelnummer, String mærke, String model, String udstyrsniveau, double stålpris, double reg_afgift, double co2_udledning) {
+  public BilModel(int vognnummer, int stelnummer, String mærke, String model, int udstyrsniveau, double stålpris, double reg_afgift, double co2_udledning) {
     this.vognnummer = vognnummer;
     this.stelnummer = stelnummer;
     this.mærke = mærke;
@@ -59,11 +59,11 @@ public class BilModel {
     this.model = model;
   }
 
-  public String getUdstyrsniveau() {
+  public int getUdstyrsniveau() {
     return udstyrsniveau;
   }
 
-  public void setUdstyrsniveau(String udstyrsniveau) {
+  public void setUdstyrsniveau(int udstyrsniveau) {
     this.udstyrsniveau = udstyrsniveau;
   }
 
