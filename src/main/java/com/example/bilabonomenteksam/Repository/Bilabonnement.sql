@@ -26,3 +26,13 @@ CREATE TABLE ListAfBiler{
     PRIMARY KEY(vognnummer)
 };
 
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()
+INSERT INTO ListAfBiler(vognummer, stelnummer,mærke,model,udstyrnivue,stålpris,reg_afgidt,) VALUES()

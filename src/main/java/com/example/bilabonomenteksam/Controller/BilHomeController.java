@@ -1,7 +1,8 @@
 package com.example.bilabonomenteksam.Controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
+@Controller
 public class BilHomeController {
 
   @GetMapping("/")
@@ -23,4 +24,5 @@ public class BilHomeController {
         }
 
 }
+
 
