@@ -43,5 +43,26 @@ public class Carliste {
     return listeAfBiler;
   }
 
+  public void createBilList(BilModel bil){
+
+    try{
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListeAfBiler (Vognnummer,Stelnummmer,Mærke,Model,Udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
+      psts.setInt(1,bil.getVognnummer());
+      psts.setInt(2, bil.getStelnummer());
+      psts.setString(3, bil.getMærke());
+      psts.setString(4, bil.getModel());
+      psts.setInt(5, bil.getUdstyrsniveau());
+      psts.setDouble(6, bil.getStålpris());
+      psts.setDouble(7, bil.getReg_afgift());
+      psts.setDouble(8, bil.getCo2_udledning());
+      psts.executeUpdate();
+    }catch (SQLException e){
+      System.out.println("Error at createBilList");
+      e.printStackTrace();
+
+    }
+
+  }
+
 
 }
