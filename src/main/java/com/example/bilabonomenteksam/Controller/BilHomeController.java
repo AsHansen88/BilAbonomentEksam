@@ -23,7 +23,8 @@ public class BilHomeController {
     return"index";
   }
   @GetMapping("/udvalg")
-  public String udvalg(){
+  public String alleBiler(Carliste liste){
+    Bilrepo.getAllBil();
     return "udvalg";
   }
   @GetMapping("/aftaler")
@@ -35,7 +36,7 @@ public class BilHomeController {
         public String tilbagelevering(){
     return "tilbagelevering";
         }
-
+/*
   @PostMapping("/udvalg")
   public String createBilList(WebRequest payload) {
     service.bilListe(payload);
@@ -44,6 +45,8 @@ public class BilHomeController {
     return ("redirect:/");
 
   }
+
+ */
 
 }
 

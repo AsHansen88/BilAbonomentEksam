@@ -12,7 +12,7 @@ public class BilModel {
   private double co2_udledning;
 
 
-  public BilModel(int vognnummer, int stelnummer, String mærke, String model, int udstyrsniveau, double stålpris, double reg_afgift, double co2_udledning) {
+    public BilModel(int vognnummer, int stelnummer, String mærke, String model, int udstyrsniveau, double stålpris, double reg_afgift, double co2_udledning) {
     this.vognnummer = vognnummer;
     this.stelnummer = stelnummer;
     this.mærke = mærke;

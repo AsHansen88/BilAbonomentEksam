@@ -14,11 +14,4 @@ import java.util.List;
 public class BillController {
 BilService service = new BilService();
 
-@GetMapping("/udvalgt")
-public List<BilModel> udvalg(){
-  return service.getAllBil();
-}
-
-
-
 }

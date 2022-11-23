@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Carliste {
+public class Carliste implements IRepo<BilModel> {
 
   private Connection conn = DBConnect.getConnection();
 
@@ -48,7 +48,7 @@ public class Carliste {
   public void createBilList(BilModel bil){
 
     try{
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListeAfBiler (Vognnummer,Stelnummmer,Mærke,Model,Udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
       psts.setInt(1,bil.getVognnummer());
       psts.setInt(2, bil.getStelnummer());
       psts.setString(3, bil.getMærke());

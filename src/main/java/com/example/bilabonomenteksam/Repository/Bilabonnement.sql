@@ -24,7 +24,6 @@ CREATE TABLE ListAfBiler
     udstyrniveau   INT,
     stålpris      DOUBLE,
     co2_udlidning DOUBLE,
-    reg_afgift int not null,
     PRIMARY KEY (vognnummer)
 );
 
