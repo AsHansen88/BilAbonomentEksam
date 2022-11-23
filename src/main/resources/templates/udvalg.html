@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Se vores udvalg af biler</title>
+    <title>Udvalg af biler</title>
+    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
 </head>
 <body>
+<h1>Vores udvalg af biler</h1>
 
-<h1>Udvalg af biler</h1>
+<table>
+    <tr
+            th:each="udvalg : ${udvalgt}">
+        <td th:text="${udvalg.getVognnummer()}"></td>
+        <td th:text="${udvalg.getStelnummer()}"></td>
+        <td th:text="${udvalg.getMærke()}"></td>
+        <td th:text="${udvalg.getModel()}"></td>
+        <td th:text="${udvalg.getUdstyrsniveau()}"></td>
+        <td th:text="${udvalg.getStålpris()}"></td>
+        <td th:text="${udvalg.getReg_afgift()}"></td>
+        <td th:text="${udvalg.getCo2_udledning()}"></td>
 
-<form action="/udvalg" method="">
-
-</form>
-
+    </tr>
+</table>
 </body>
 </html>
+

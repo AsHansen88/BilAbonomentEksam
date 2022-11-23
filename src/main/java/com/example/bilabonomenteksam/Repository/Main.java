@@ -1,15 +1,17 @@
 package com.example.bilabonomenteksam.Repository;
 
+import com.example.bilabonomenteksam.Model.BilModel;
+
+
 public class Main {
 
   public static void main(String[] args) {
 
     DBConnect.getConnection();
 
-    LejeAftale LA = new LejeAftale();
+    Carliste billiste = new Carliste();
 
-    System.out.println(LA.getAllBil());
-    System.out.println(LA.getBil(1));
+    System.out.println(billiste.getAllBil());
 
   }
 

@@ -93,4 +93,18 @@ public class BilModel {
   public void setCo2_udledning(double co2_udledning) {
     this.co2_udledning = co2_udledning;
   }
+
+  @Override
+  public String toString() {
+    return "BilModel{" +
+        "vognnummer=" + vognnummer +
+        ", stelnummer=" + stelnummer +
+        ", mærke='" + mærke + '\'' +
+        ", model='" + model + '\'' +
+        ", udstyrsniveau=" + udstyrsniveau +
+        ", Stålpris=" + Stålpris +
+        ", reg_afgift=" + reg_afgift +
+        ", co2_udledning=" + co2_udledning +
+        '}';
+  }
 }

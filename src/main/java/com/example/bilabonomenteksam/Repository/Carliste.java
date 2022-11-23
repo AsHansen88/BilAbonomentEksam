@@ -19,20 +19,22 @@ public class Carliste {
     List<BilModel> listeAfBiler = new ArrayList<>();
 
     try{
-      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.ListeAfBiler");
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.ListAfBiler");
       ResultSet resultSet = psts.executeQuery();
 
       while(resultSet.next()){
-        listeAfBiler.add(new BilModel(
-            resultSet.getInt("Vognnummer"),
-            resultSet.getInt("Stelnummer"),
-            resultSet.getString("Mærke"),
-            resultSet.getString("Model"),
-            resultSet.getInt("Udstyrsniveau"),
-            resultSet.getDouble("stålpris"),
-            resultSet.getDouble("reg_afgift"),
-            resultSet.getDouble("co2_udledning")
-        ));
+        BilModel tmp = new BilModel(resultSet.getInt(1),
+            resultSet.getInt(2),
+            resultSet.getString(3),
+            resultSet.getString(4),
+            resultSet.getInt(5),
+            resultSet.getDouble(6),
+            resultSet.getDouble(7),
+            resultSet.getDouble(8));
+        listeAfBiler.add(tmp);
+
+
+
 
       }
 
