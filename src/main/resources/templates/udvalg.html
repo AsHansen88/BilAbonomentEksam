@@ -9,16 +9,18 @@
 <h1>Vores udvalg af biler</h1>
 
 <table>
+
     <tr
-            th:each="udvalg : ${udvalgt}">
-        <td th:text="${udvalg.getVognnummer()}"></td>
-        <td th:text="${udvalg.getStelnummer()}"></td>
-        <td th:text="${udvalg.getMærke()}"></td>
-        <td th:text="${udvalg.getModel()}"></td>
-        <td th:text="${udvalg.getUdstyrsniveau()}"></td>
-        <td th:text="${udvalg.getStålpris()}"></td>
-        <td th:text="${udvalg.getReg_afgift()}"></td>
-        <td th:text="${udvalg.getCo2_udledning()}"></td>
+            th:each= "udvalg : ${udvalg}">
+
+        <td th:text="${Bilrepo.getvognnummer}"></td>
+        <td th:text="${bilmodel.stelnummer}"></td>
+        <td th:text="${bilmodel.getMærke()}"></td>
+        <td th:text="${bilmodel.getModel()}"></td>
+        <td th:text="${bilmodel.getUdstyrsniveau()}"></td>
+        <td th:text="${bilmodel.getStålpris()}"></td>
+        <td th:text="${bilmodel.getReg_afgift()}"></td>
+        <td th:text="${bilmodel.getCo2_udledning()}"></td>
 
     </tr>
 </table>

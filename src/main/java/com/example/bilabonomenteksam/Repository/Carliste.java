@@ -33,9 +33,6 @@ public class Carliste implements IRepo<BilModel> {
             resultSet.getDouble(8));
         listeAfBiler.add(tmp);
 
-
-
-
       }
 
     }catch (SQLException e){
@@ -43,6 +40,11 @@ public class Carliste implements IRepo<BilModel> {
       e.printStackTrace();
     }
     return listeAfBiler;
+  }
+
+  @Override
+  public BilModel getSinglebilId(int vognnummer) {
+    return null;
   }
 
   public void createBilList(BilModel bil){

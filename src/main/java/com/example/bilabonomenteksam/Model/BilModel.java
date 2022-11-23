@@ -23,12 +23,6 @@ public class BilModel {
     this.co2_udledning = co2_udledning;
   }
 
-  public BilModel(int id, String indregistrering) {
-  }
-
-  public BilModel(String vognnummer) {
-  }
-
 
   public int getVognnummer() {
     return vognnummer;
