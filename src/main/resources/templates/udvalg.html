@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Udvalg af biler</title>
-    <link rel="stylesheet" th:href="@{style.css}"  type="text/css">
+    <link rel="stylesheet" th:href="@{udvalg.css}"  type="text/css">
 </head>
 <body>
 <h1>Vores udvalg af biler</h1>
@@ -21,6 +21,7 @@
         <td th:text="${Carliste.steelPrice}"></td>
         <td th:text="${Carliste.reg_Charge}"></td>
         <td th:text="${Carliste.co2_Emmission}"></td>
+        <td th:text="${Carliste.status}"></td>
 
     </tr>
 </table>

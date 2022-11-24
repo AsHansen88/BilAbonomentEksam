@@ -30,7 +30,9 @@ public class Carliste implements IRepo<BilModel> {
             resultSet.getInt(5),
             resultSet.getDouble(6),
             resultSet.getDouble(7),
-            resultSet.getDouble(8));
+            resultSet.getDouble(8),
+            resultSet.getString(9));
+
         listeAfBiler.add(tmp);
 
       }
