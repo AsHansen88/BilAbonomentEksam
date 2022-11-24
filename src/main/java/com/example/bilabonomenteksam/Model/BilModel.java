@@ -2,9 +2,9 @@ package com.example.bilabonomenteksam.Model;
 
 public class BilModel {
 
-  private int vognnummer;
-  private int stelnummer;
-  private String mærke;
+  private int vehicleNumber;
+  private int frameNumber; //frameNumber
+  private String make; //make
   private String model;
   private int udstyrsniveau;
   private double Stålpris;
@@ -12,10 +12,10 @@ public class BilModel {
   private double co2_udledning;
 
 
-    public BilModel(int vognnummer, int stelnummer, String mærke, String model, int udstyrsniveau, double stålpris, double reg_afgift, double co2_udledning) {
-    this.vognnummer = vognnummer;
-    this.stelnummer = stelnummer;
-    this.mærke = mærke;
+    public BilModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission) {
+    this.vehicleNumber = vehicleNumber;
+    this.frameNumber = frameNumber;
+    this.make = make;
     this.model = model;
     this.udstyrsniveau = udstyrsniveau;
     this.Stålpris = stålpris;
@@ -24,28 +24,28 @@ public class BilModel {
   }
 
 
-  public int getVognnummer() {
-    return vognnummer;
+  public int getVehicleNumber() {
+    return vehicleNumber;
   }
 
-  public void setVognnummer(int vognnummer) {
-    this.vognnummer = vognnummer;
+  public void setVehiclenumber(int vehicleNumber) {
+    this.vehicleNumber = vehicleNumber;
   }
 
-  public int getStelnummer() {
-    return stelnummer;
+  public int getFrameNumber() {
+    return frameNumber;
   }
 
-  public void setStelnummer(int stelnummer) {
-    this.stelnummer = stelnummer;
+  public void setFrameNumber(int frameNumber) {
+    this.frameNumber = frameNumber;
   }
 
-  public String getMærke() {
-    return mærke;
+  public String getMake() {
+    return make;
   }
 
-  public void setMærke(String mærke) {
-    this.mærke = mærke;
+  public void setMake(String mærke) {
+    this.make = make;
   }
 
   public String getModel() {
@@ -56,12 +56,12 @@ public class BilModel {
     this.model = model;
   }
 
-  public int getUdstyrsniveau() {
-    return udstyrsniveau;
+  public int getEquipmentLevel() {
+    return equipmentLevel;
   }
 
-  public void setUdstyrsniveau(int udstyrsniveau) {
-    this.udstyrsniveau = udstyrsniveau;
+  public void setEquipmentLevel(int equipmentLevel) {
+    this.equipmentLevel = equipmentLevel;
   }
 
   public double getStålpris() {
@@ -72,28 +72,28 @@ public class BilModel {
     Stålpris = stålpris;
   }
 
-  public double getReg_afgift() {
-    return reg_afgift;
+  public double getReg_Charge() {
+    return reg_Charge;
   }
 
-  public void setReg_afgift(double reg_afgift) {
-    this.reg_afgift = reg_afgift;
+  public void setReg_Charge(double reg_Charge) {
+    this.reg_Charge = reg_Charge;
   }
 
-  public double getCo2_udledning() {
-    return co2_udledning;
+  public double getCo2_Emmission() {
+    return co2_Emmission;
   }
 
-  public void setCo2_udledning(double co2_udledning) {
-    this.co2_udledning = co2_udledning;
+  public void setCo2_Emmission(double co2_Emmission) {
+    this.co2_Emmission = co2_Emmission;
   }
 
   @Override
   public String toString() {
     return "BilModel{" +
-        "vognnummer=" + vognnummer +
-        ", stelnummer=" + stelnummer +
-        ", mærke='" + mærke + '\'' +
+        "vehicleNumber=" + vehicleNumber +
+        ", stelnummer=" + frameNumber +
+        ", mærke='" + make + '\'' +
         ", model='" + model + '\'' +
         ", udstyrsniveau=" + udstyrsniveau +
         ", Stålpris=" + Stålpris +

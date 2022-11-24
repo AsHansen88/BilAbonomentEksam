@@ -11,16 +11,16 @@
 <table>
 
     <tr
-            th:each= "udvalg : ${udvalg}">
+            th:each= "Carliste : ${udvalgt}">
 
-        <td th:text="${Bilrepo.getvognnummer}"></td>
-        <td th:text="${bilmodel.stelnummer}"></td>
-        <td th:text="${bilmodel.getMærke()}"></td>
-        <td th:text="${bilmodel.getModel()}"></td>
-        <td th:text="${bilmodel.getUdstyrsniveau()}"></td>
-        <td th:text="${bilmodel.getStålpris()}"></td>
-        <td th:text="${bilmodel.getReg_afgift()}"></td>
-        <td th:text="${bilmodel.getCo2_udledning()}"></td>
+        <td th:text="${Carliste.vehicleNumber}"></td>
+        <td th:text="${Carliste.frameNumber}"></td>
+        <td th:text="${Carliste.make}"></td>
+        <td th:text="${Carliste.model}"></td>
+        <td th:text="${Carliste.equipmentLevel}"></td>
+        <td th:text="${Carliste.steelPrice}"></td>
+        <td th:text="${Carliste.reg_Charge}"></td>
+        <td th:text="${Carliste.co2_Emmission}"></td>
 
     </tr>
 </table>

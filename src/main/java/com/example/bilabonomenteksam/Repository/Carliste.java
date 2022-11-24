@@ -14,15 +14,15 @@ public class Carliste implements IRepo<BilModel> {
   private Connection conn = DBConnect.getConnection();
 
 
-  public List<BilModel> getAllBil(){
+  public List<BilModel> getAllBil() {
 
     List<BilModel> listeAfBiler = new ArrayList<>();
 
-    try{
+    try {
       PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.ListAfBiler");
       ResultSet resultSet = psts.executeQuery();
 
-      while(resultSet.next()){
+      while (resultSet.next()) {
         BilModel tmp = new BilModel(resultSet.getInt(1),
             resultSet.getInt(2),
             resultSet.getString(3),
@@ -35,7 +35,7 @@ public class Carliste implements IRepo<BilModel> {
 
       }
 
-    }catch (SQLException e){
+    } catch (SQLException e) {
       System.out.println("Error at getAllbil");
       e.printStackTrace();
     }
@@ -49,16 +49,17 @@ public class Carliste implements IRepo<BilModel> {
 
   public void createBilList(BilModel bil){
 
-    try{
+    try {
       PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
-      psts.setInt(1,bil.getVognnummer());
-      psts.setInt(2, bil.getStelnummer());
-      psts.setString(3, bil.getMærke());
+
+      psts.setInt(1,bil.getVehicleNumber());
+      psts.setInt(2, bil.getFrameNumber());
+      psts.setString(3, bil.getMake());
       psts.setString(4, bil.getModel());
-      psts.setInt(5, bil.getUdstyrsniveau());
-      psts.setDouble(6, bil.getStålpris());
-      psts.setDouble(7, bil.getReg_afgift());
-      psts.setDouble(8, bil.getCo2_udledning());
+      psts.setInt(5, bil.getEquipmentLevel());
+      psts.setDouble(6, bil.getSteelPrice());
+      psts.setDouble(7, bil.getReg_Charge());
+      psts.setDouble(8, bil.getCo2_Emmission());
       psts.executeUpdate();
     }catch (SQLException e){
       System.out.println("Error at createBilList");
@@ -69,4 +70,5 @@ public class Carliste implements IRepo<BilModel> {
   }
 
 
-}
+    }
+

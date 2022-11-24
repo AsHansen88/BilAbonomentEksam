@@ -21,10 +21,11 @@ CREATE TABLE ListAfBiler
     stelnummer    INT,
     mærke         VARCHAR(50),
     model         VARCHAR(50),
-    udstyrniveau   INT,
-    stålpris      DOUBLE,
-    co2_udlidning DOUBLE,
-    PRIMARY KEY (vognnummer)
+    equipmentLevel   INT,
+    steelPrice      DOUBLE,
+    reg_Charge DOUBLE,
+    co2_Emmission DOUBLE,
+    PRIMARY KEY (vehicleNumber)
 );
 
 INSERT INTO ListAfBiler(vognnummer, stelnummer,mærke,model,udstyrniveau,stålpris,reg_afgift,co2_udlidning) VALUES(1,1111,'Citroen','C5 X',5,58000,23000,345);
