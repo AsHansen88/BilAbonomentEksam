@@ -53,7 +53,7 @@ public class Carliste implements IRepo<BilModel> {
   public void createBilList(BilModel bil) {
 
     try {
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?,?)");
 
       psts.setInt(1,bil.getVehicleNumber());
       psts.setInt(2, bil.getFrameNumber());
@@ -63,6 +63,7 @@ public class Carliste implements IRepo<BilModel> {
       psts.setDouble(6, bil.getSteelPrice());
       psts.setDouble(7, bil.getReg_Charge());
       psts.setDouble(8, bil.getCo2_Emmission());
+      psts.setString(9, bil.getStatus());
       psts.executeUpdate();
     }catch (SQLException e){
       System.out.println("Error at createBilList");

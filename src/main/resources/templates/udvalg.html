@@ -8,7 +8,21 @@
 <body>
 <h1>Vores udvalg af biler</h1>
 
-<table>
+<table id="carTable">
+
+
+    <tr>
+        <th>vehicleNumber</th>
+        <th>FrameNumber</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>EquipmentLevel</th>
+        <th>SteelPrice</th>
+        <th>Reg_Charge</th>
+        <th>CO2_Emmission</th>
+        <th>Status</th>
+
+    </tr>
 
     <tr
             th:each= "Carliste : ${udvalgt}">

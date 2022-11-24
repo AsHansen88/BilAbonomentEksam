@@ -10,9 +10,10 @@ public class BilModel {
   private double steelPrice; // steelPrice
   private double reg_Charge; //reg_Charge
   private double co2_Emmission; //co2_Emmission
+  private String status;
 
 
-    public BilModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission) {
+    public BilModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission, String status) {
     this.vehicleNumber = vehicleNumber;
     this.frameNumber = frameNumber;
     this.make = make;
@@ -21,6 +22,7 @@ public class BilModel {
     this.steelPrice = steelPrice;
     this.reg_Charge = reg_Charge;
     this.co2_Emmission = co2_Emmission;
+    this.status = status;
   }
 
 
@@ -88,6 +90,14 @@ public class BilModel {
     this.co2_Emmission = co2_Emmission;
   }
 
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
   @Override
   public String toString() {
     return "BilModel{" +
@@ -99,6 +109,7 @@ public class BilModel {
         ", Stålpris=" + steelPrice +
         ", reg_afgift=" + reg_Charge +
         ", co2_udledning=" + co2_Emmission +
+        ", status=" + status +
         '}';
   }
 }
