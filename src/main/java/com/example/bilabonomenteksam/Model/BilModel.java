@@ -6,10 +6,10 @@ public class BilModel {
   private int frameNumber; //frameNumber
   private String make; //make
   private String model;
-  private int udstyrsniveau;
-  private double Stålpris;
-  private double reg_afgift;
-  private double co2_udledning;
+  private int equipmentLevel; //equipmentLevel
+  private double steelPrice; // steelPrice
+  private double reg_Charge; //reg_Charge
+  private double co2_Emmission; //co2_Emmission
 
 
     public BilModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission) {
@@ -17,10 +17,10 @@ public class BilModel {
     this.frameNumber = frameNumber;
     this.make = make;
     this.model = model;
-    this.udstyrsniveau = udstyrsniveau;
-    this.Stålpris = stålpris;
-    this.reg_afgift = reg_afgift;
-    this.co2_udledning = co2_udledning;
+    this.equipmentLevel = equipmentLevel;
+    this.steelPrice = steelPrice;
+    this.reg_Charge = reg_Charge;
+    this.co2_Emmission = co2_Emmission;
   }
 
 
@@ -64,12 +64,12 @@ public class BilModel {
     this.equipmentLevel = equipmentLevel;
   }
 
-  public double getStålpris() {
-    return Stålpris;
+  public double getSteelPrice() {
+    return steelPrice;
   }
 
-  public void setStålpris(double stålpris) {
-    Stålpris = stålpris;
+  public void setSteelPrice(double steelPrice) {
+    steelPrice = steelPrice;
   }
 
   public double getReg_Charge() {
@@ -95,10 +95,10 @@ public class BilModel {
         ", stelnummer=" + frameNumber +
         ", mærke='" + make + '\'' +
         ", model='" + model + '\'' +
-        ", udstyrsniveau=" + udstyrsniveau +
-        ", Stålpris=" + Stålpris +
-        ", reg_afgift=" + reg_afgift +
-        ", co2_udledning=" + co2_udledning +
+        ", udstyrsniveau=" + equipmentLevel +
+        ", Stålpris=" + steelPrice +
+        ", reg_afgift=" + reg_Charge +
+        ", co2_udledning=" + co2_Emmission +
         '}';
   }
 }

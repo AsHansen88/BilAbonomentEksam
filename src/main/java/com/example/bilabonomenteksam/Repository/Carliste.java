@@ -47,7 +47,8 @@ public class Carliste implements IRepo<BilModel> {
     return null;
   }
 
-  public void createBilList(BilModel bil){
+
+  public void createBilList(BilModel bil) {
 
     try {
       PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?)");
@@ -68,6 +69,7 @@ public class Carliste implements IRepo<BilModel> {
     }
 
   }
+
 
 
     }
