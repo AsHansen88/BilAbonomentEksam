@@ -2,21 +2,23 @@ package com.example.bilabonomenteksam.Model;
 
 public class RentalAgreementsModel {
 
-  private int frameNumber;
+  private int vehicleNumber;
 
   private int id;
   private String name;
   private String email;
   private int phonenumber;
+  private String address;
   private String rentalPeriod;
-  private int price;
+  private double price;
 
-  public RentalAgreementsModel(int frameNumber, int id, String name, String email, int phonenumber, String rentalPeriod, int price) {
-    this.frameNumber = frameNumber;
+  public RentalAgreementsModel(int vehicleNumber, int id, String name, String email, int phonenumber,String address, String rentalPeriod, double price) {
+    this.vehicleNumber = vehicleNumber;
     this.id = id;
     this.name = name;
     this.email = email;
     this.phonenumber = phonenumber;
+    this.address = address;
     this.rentalPeriod = rentalPeriod;
     this.price = price;
   }
@@ -40,8 +42,8 @@ public class RentalAgreementsModel {
     return vehicleNumber;
   }
 
-  public void setFrameNumber(int frameNumber) {
-    this.frameNumber = frameNumber;
+  public void setVehicleNumber(int frameNumber) {
+    this.vehicleNumber = frameNumber;
   }
 
   public int getId() {
@@ -84,12 +86,20 @@ public class RentalAgreementsModel {
     this.rentalPeriod = rentalPeriod;
   }
 
-  public int getPrice() {
+  public double getPrice() {
     return price;
   }
 
-  public void setPrice(int price) {
+  public void setPrice(double price) {
     this.price = price;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
   }
 
   @Override
@@ -100,6 +110,7 @@ public class RentalAgreementsModel {
         ", name='" + name + '\'' +
         ", email='" + email + '\'' +
         ", phonenumber=" + phonenumber +
+        ",address=0" + address +
         ", rentalPeriod='" + rentalPeriod + '\'' +
         ", price=" + price +
         '}';

@@ -21,15 +21,16 @@ CREATE TABLE ListOfCars
 
 CREATE TABLE RentalAgreements
 (
-    frameNumber int,
+    vehicleNumber int,
     id INT AUTO_INCREMENT,
     name VARCHAR(50),
     email VARCHAR(50),
     phoneNumber int,
+    address VARCHAR(50),
     rentalPeriod VARCHAR(50),
     price int,
     PRIMARY KEY (id),
-    FOREIGN KEY (frameNumber) REFERENCES ListOfCars(frameNumber)
+    FOREIGN KEY (vehicleNumber) REFERENCES ListOfCars(vehicleNumber)
 );
 
 
@@ -44,7 +45,7 @@ INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, 
 INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, steelPrice, reg_Charge, co2_Emmission,status)VALUES (9, 1999, 'Kia', 'Sportage', 2, 60000, 20000, 123,'');
 INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, steelPrice, reg_Charge, co2_Emmission,status)VALUES (10, 2000, 'Volvo', 'XC90', 5, 65000, 10000, 423,'');
 
-INSERT INTO RentalAgreements(id, name, email, phoneNumber, rentalPeriod, price)  VALUES(1,'Test','Test@test.test',12345,'Et antal måneder',4000);
+INSERT INTO RentalAgreements(id, name, email, phoneNumber,address, rentalPeriod, price)  VALUES(1,'Test','Test@test.test',12345,'test vej nr. 21','Et antal måneder',4000);
 SELECT * FROM ListOfCars Inner JOIN RentalAgreements on ListOfCars.vehicleNumber = RentalAgreements.id=1;
 
 SELECT * FROM ListOfCars;

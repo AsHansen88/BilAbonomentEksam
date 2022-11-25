@@ -15,11 +15,12 @@ public class RentalAgreementsService {
 
   public void createRentalAgreement(WebRequest req){
 
-    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(req.getParameter("frameNumber"),
+    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(req.getParameter("vehicleNumber"),
         req.getParameter("id"),
         req.getParameter("name"),
         req.getParameter("email"),
         req.getParameter("phonenumber"),
+        req.getParameter("address"),
         req.getParameter("rentalPeriod"),
         req.getParameter("price"),
         req.getParameter(""));
