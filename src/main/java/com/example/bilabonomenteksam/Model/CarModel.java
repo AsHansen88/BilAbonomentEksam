@@ -25,7 +25,6 @@ public class CarModel {
     this.status = status;
   }
 
-
   public int getVehicleNumber() {
     return vehicleNumber;
   }
