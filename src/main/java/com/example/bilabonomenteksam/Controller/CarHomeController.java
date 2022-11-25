@@ -1,18 +1,27 @@
 package com.example.bilabonomenteksam.Controller;
 
 import com.example.bilabonomenteksam.Model.CarModel;
+import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 import com.example.bilabonomenteksam.Repository.CarlistRepo;
 import com.example.bilabonomenteksam.Repository.IRepo;
+import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
 import com.example.bilabonomenteksam.Service.CarService;
+import com.example.bilabonomenteksam.Service.RentalAgreementsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.WebRequest;
+
+import java.util.List;
 
 @Controller
 public class CarHomeController {
 
   private final IRepo<CarModel> CarRepo = new CarlistRepo();
-  CarService car= new CarService();
+  RentalAgreementsService service= new RentalAgreementsService();
+  RentalAgreementRepo repoagreement = new RentalAgreementRepo();
 
 
   @GetMapping("/")
@@ -24,10 +33,19 @@ public class CarHomeController {
     model.addAttribute("udvalgt", CarRepo.getAllCar());
     return "udvalg";
   }
+
   @GetMapping("/aftaler")
-  public String aftaler(){
+  public String rentalAgreements(){
+    service.getAllCarAgreements();
+
     return "aftaler";
-        }
+  }
+
+  @PostMapping("/aftaler")
+  public String aftaler(WebRequest payload){
+    service.createRentalAgreement(payload);
+    return "redirect:/aftaler";
+  }
 
         @GetMapping("/tilbagelevering")
         public String tilbagelevering(){
@@ -35,7 +53,8 @@ public class CarHomeController {
         }
 
 
-    //return ("redirect:/");
+
+    //return aftaler;
  }
 
 

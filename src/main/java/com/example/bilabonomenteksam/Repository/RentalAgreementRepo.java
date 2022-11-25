@@ -1,6 +1,5 @@
 package com.example.bilabonomenteksam.Repository;
 
-import com.example.bilabonomenteksam.Model.CarModel;
 import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 
 import java.sql.Connection;
@@ -51,6 +50,7 @@ public class RentalAgreementRepo {
       psts.setString(6, rentalAgreementsModel.getRentalPeriod());
       psts.setDouble(7, rentalAgreementsModel.getPrice());
       psts.executeUpdate();
+
     }catch (SQLException e){
       System.out.println("Error at createRentalAgreement");
       e.printStackTrace();

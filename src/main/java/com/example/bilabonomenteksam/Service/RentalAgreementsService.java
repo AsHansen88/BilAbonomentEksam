@@ -22,7 +22,9 @@ public class RentalAgreementsService {
         req.getParameter("phonenumber"),
         req.getParameter("rentalPeriod"),
         req.getParameter("price"),
-        req.getParameter(0));
+        req.getParameter(""));
+
+    repo.createRentalAgreement(rentalAgreementsModel);
 
   }
 

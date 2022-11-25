@@ -21,11 +21,23 @@ public class RentalAgreementsModel {
     this.price = price;
   }
 
-  public RentalAgreementsModel(int frameNumber, int id, String name, String address, String email, int phonenumber, String rentalagrement, double price) {
+  public RentalAgreementsModel(int vehicleNumber, int id, String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
+    this.vehicleNumber = vehicleNumber;
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.phonenumber = phonenumber;
+    this.address = address;
+    this.rentalPeriod = rentalPeriod;
+    this.price = price;
+
   }
 
-  public int getFrameNumber() {
-    return frameNumber;
+  public RentalAgreementsModel(String vehicleNumber, String id, String name, String email, String phonenumber, String address, String rentalPeriod, String price, String parameter) {
+  }
+
+  public int getVehicleNumber() {
+    return vehicleNumber;
   }
 
   public void setFrameNumber(int frameNumber) {
@@ -83,7 +95,7 @@ public class RentalAgreementsModel {
   @Override
   public String toString() {
     return "RentalAgreementsModel{" +
-        "frameNumber=" + frameNumber +
+        "frameNumber=" + vehicleNumber +
         ", id=" + id +
         ", name='" + name + '\'' +
         ", email='" + email + '\'' +
