@@ -1,7 +1,5 @@
 package com.example.bilabonomenteksam.Repository;
 
-import com.example.bilabonomenteksam.Model.BilModel;
-
 
 public class Main {
 
@@ -9,9 +7,9 @@ public class Main {
 
     DBConnect.getConnection();
 
-    Carliste billiste = new Carliste();
+    CarlistRepo billiste = new CarlistRepo();
 
-    System.out.println(billiste.getAllBil());
+    System.out.println(billiste.getAllCar());
 
 
   }

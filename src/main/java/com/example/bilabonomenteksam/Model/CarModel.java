@@ -1,6 +1,6 @@
 package com.example.bilabonomenteksam.Model;
 
-public class BilModel {
+public class CarModel {
 
   private int vehicleNumber;
   private int frameNumber; //frameNumber
@@ -13,7 +13,7 @@ public class BilModel {
   private String status;
 
 
-    public BilModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission, String status) {
+    public CarModel(int vehicleNumber, int frameNumber, String make, String model, int equipmentLevel, double steelPrice, double reg_Charge, double co2_Emmission, String status) {
     this.vehicleNumber = vehicleNumber;
     this.frameNumber = frameNumber;
     this.make = make;

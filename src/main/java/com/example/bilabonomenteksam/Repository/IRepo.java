@@ -1,13 +1,13 @@
 package com.example.bilabonomenteksam.Repository;
 
-import com.example.bilabonomenteksam.Model.BilModel;
+import com.example.bilabonomenteksam.Model.CarModel;
 
 import java.util.List;
 
 public interface IRepo<T> {
 
-  List<T> getAllBil();
+  List<T> getAllCar();
 
 
-  BilModel getSinglebilId(int vognnummer);
+  CarModel getSingleCar(int vognnummer);
 }

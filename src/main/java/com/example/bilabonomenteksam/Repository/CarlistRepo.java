@@ -1,6 +1,6 @@
 package com.example.bilabonomenteksam.Repository;
 
-import com.example.bilabonomenteksam.Model.BilModel;
+import com.example.bilabonomenteksam.Model.CarModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,21 +9,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Carliste implements IRepo<BilModel> {
+public class CarlistRepo implements IRepo<CarModel> {
 
   private Connection conn = DBConnect.getConnection();
 
 
-  public List<BilModel> getAllBil() {
+  public List<CarModel> getAllCar() {
 
-    List<BilModel> listeAfBiler = new ArrayList<>();
+    List<CarModel> listOfCars = new ArrayList<>();
 
     try {
       PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.ListAfBiler");
       ResultSet resultSet = psts.executeQuery();
 
       while (resultSet.next()) {
-        BilModel tmp = new BilModel(resultSet.getInt(1),
+        CarModel tmp = new CarModel(resultSet.getInt(1),
             resultSet.getInt(2),
             resultSet.getString(3),
             resultSet.getString(4),
@@ -33,7 +33,7 @@ public class Carliste implements IRepo<BilModel> {
             resultSet.getDouble(8),
             resultSet.getString(9));
 
-        listeAfBiler.add(tmp);
+        listOfCars.add(tmp);
 
       }
 
@@ -41,16 +41,16 @@ public class Carliste implements IRepo<BilModel> {
       System.out.println("Error at getAllbil");
       e.printStackTrace();
     }
-    return listeAfBiler;
+    return listOfCars;
   }
 
   @Override
-  public BilModel getSinglebilId(int vognnummer) {
+  public CarModel getSingleCar(int vehicleNumber) {
     return null;
   }
 
 
-  public void createBilList(BilModel bil) {
+  public void createDriver(CarModel bil) {
 
     try {
       PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?,?)");

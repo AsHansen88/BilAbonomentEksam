@@ -1,23 +1,18 @@
 package com.example.bilabonomenteksam.Controller;
 
-import com.example.bilabonomenteksam.Model.BilModel;
-import com.example.bilabonomenteksam.Repository.Carliste;
+import com.example.bilabonomenteksam.Model.CarModel;
+import com.example.bilabonomenteksam.Repository.CarlistRepo;
 import com.example.bilabonomenteksam.Repository.IRepo;
-import com.example.bilabonomenteksam.Service.BilService;
+import com.example.bilabonomenteksam.Service.CarService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.context.request.WebRequest;
-
-import java.util.List;
 
 @Controller
-public class BilHomeController {
+public class CarHomeController {
 
-  private final IRepo<BilModel> Bilrepo = new Carliste();
-  BilService bil = new BilService();
+  private final IRepo<CarModel> CarRepo = new CarlistRepo();
+  CarService car= new CarService();
 
 
   @GetMapping("/")
@@ -26,7 +21,7 @@ public class BilHomeController {
   }
   @GetMapping("/udvalg")
   public String alleBiler(Model model){
-    model.addAttribute("udvalgt", Bilrepo.getAllBil());
+    model.addAttribute("udvalgt", CarRepo.getAllCar());
     return "udvalg";
   }
   @GetMapping("/aftaler")
