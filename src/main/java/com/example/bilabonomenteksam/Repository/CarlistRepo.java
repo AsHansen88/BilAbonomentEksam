@@ -19,7 +19,7 @@ public class CarlistRepo implements IRepo<CarModel> {
     List<CarModel> listOfCars = new ArrayList<>();
 
     try {
-      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Bil.ListAfBiler");
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Car.ListOfCars");
       ResultSet resultSet = psts.executeQuery();
 
       while (resultSet.next()) {
@@ -38,7 +38,7 @@ public class CarlistRepo implements IRepo<CarModel> {
       }
 
     } catch (SQLException e) {
-      System.out.println("Error at getAllbil");
+      System.out.println("Error at getAllCar");
       e.printStackTrace();
     }
     return listOfCars;
@@ -53,7 +53,7 @@ public class CarlistRepo implements IRepo<CarModel> {
   public void createDriver(CarModel bil) {
 
     try {
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Bil.ListAfBiler (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.ListOfCars (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?,?)");
 
       psts.setInt(1,bil.getVehicleNumber());
       psts.setInt(2, bil.getFrameNumber());
