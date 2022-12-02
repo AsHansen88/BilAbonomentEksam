@@ -40,6 +40,11 @@ public class CarHomeController {
     return "tilbagelevering";
         }
 
+  @GetMapping("/ListOfAgreements")
+  public String alleAftaler(Model model){
+    model.addAttribute("Aftaler", service.getAllCarAgreements());
+    return "ListOfAgreements";
+  }
 
 
     //return aftaler;

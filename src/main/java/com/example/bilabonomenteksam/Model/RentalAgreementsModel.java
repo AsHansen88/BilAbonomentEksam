@@ -110,7 +110,7 @@ public class RentalAgreementsModel {
         ", name='" + name + '\'' +
         ", email='" + email + '\'' +
         ", phonenumber=" + phonenumber +
-        ",address=0" + address +
+        ", address=" + address +
         ", rentalPeriod='" + rentalPeriod + '\'' +
         ", price=" + price +
         '}';
