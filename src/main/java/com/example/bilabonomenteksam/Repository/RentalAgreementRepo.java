@@ -44,7 +44,7 @@ public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
           psts.setInt(1,vehicleNumber);
       ResultSet resultSet = psts.executeQuery();
     }catch(SQLException e){
-      System.out.println("Error getrentalagreementsmodel");
+      System.out.println("Error getRentalAgreementsModel");
       e.printStackTrace();
     }return null;
 }

@@ -33,6 +33,18 @@ CREATE TABLE RentalAgreements
     FOREIGN KEY (vehicleNumber) REFERENCES ListOfCars(vehicleNumber)
 );
 
+CREATE TABLE DamageReports
+(
+    damageId int AUTO_INCREMENT,
+    damageReportDescription varchar(200),
+    damageTitle varchar(50),
+    damagePrice double,
+    vehicleNumber int,
+    kmTraveledOverLimit double,
+    totalDamageCost double,
+    PRIMARY KEY (damageId)
+);
+
 
 INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, steelPrice, reg_Charge, co2_Emmission,status)VALUES (1, 1111, 'Citroen', 'C5 X', 5, 58000, 23000, 345,'');
 INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, steelPrice, reg_Charge, co2_Emmission,status)VALUES (2, 1222, 'Ford', 'Ford Mustang', 8, 230000, 40000, 567,'');
