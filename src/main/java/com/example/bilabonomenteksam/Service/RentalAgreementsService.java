@@ -13,17 +13,20 @@ public class RentalAgreementsService {
     return repo.getallCaragreements();
   }
 
+  public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
+    return repo.GetRentalAgreementsModel(vehicleNumber);
+  }
+
   public void createRentalAgreement(WebRequest req){
 
-    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(req.getParameter("vehicleNumber"),
-        req.getParameter("id"),
+    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(Integer.parseInt(req.getParameter("vehicleNumber")),
+        //Integer.parseInt(req.getParameter("id")),
         req.getParameter("name"),
         req.getParameter("email"),
-        req.getParameter("phonenumber"),
         req.getParameter("address"),
+        Integer.parseInt(req.getParameter("phonenumber")),
         req.getParameter("rentalPeriod"),
-        req.getParameter("price"),
-        req.getParameter(""));
+        Double.parseDouble(req.getParameter("price")));
 
     repo.createRentalAgreement(rentalAgreementsModel);
 

@@ -3,7 +3,6 @@ package com.example.bilabonomenteksam.Model;
 public class RentalAgreementsModel {
 
   private int vehicleNumber;
-
   private int id;
   private String name;
   private String email;
@@ -12,9 +11,10 @@ public class RentalAgreementsModel {
   private String rentalPeriod;
   private double price;
 
-  public RentalAgreementsModel(int vehicleNumber, int id, String name, String email, int phonenumber,String address, String rentalPeriod, double price) {
+/*
+  public RentalAgreementsCreateModel(int vehicleNumber, String name, String email, int phonenumber,String address, String rentalPeriod, double price) {
     this.vehicleNumber = vehicleNumber;
-    this.id = id;
+    //this.id = id;
     this.name = name;
     this.email = email;
     this.phonenumber = phonenumber;
@@ -22,10 +22,10 @@ public class RentalAgreementsModel {
     this.rentalPeriod = rentalPeriod;
     this.price = price;
   }
-
-  public RentalAgreementsModel(int vehicleNumber, int id, String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
+*/
+  public RentalAgreementsModel(int vehicleNumber, /*int id,*/ String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
     this.vehicleNumber = vehicleNumber;
-    this.id = id;
+    //this.id = id;
     this.name = name;
     this.email = email;
     this.phonenumber = phonenumber;
@@ -35,9 +35,9 @@ public class RentalAgreementsModel {
 
   }
 
-  public RentalAgreementsModel(String vehicleNumber, String id, String name, String email, String phonenumber, String address, String rentalPeriod, String price, String parameter) {
+ /* public RentalAgreementsModel(String vehicleNumber, String id, String name, String email, String phonenumber, String address, String rentalPeriod, String price, String parameter) {
   }
-
+*/
   public int getVehicleNumber() {
     return vehicleNumber;
   }

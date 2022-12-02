@@ -21,8 +21,8 @@ CREATE TABLE ListOfCars
 
 CREATE TABLE RentalAgreements
 (
-    vehicleNumber int,
     id INT AUTO_INCREMENT,
+    vehicleNumber int,
     name VARCHAR(50),
     email VARCHAR(50),
     phoneNumber int,

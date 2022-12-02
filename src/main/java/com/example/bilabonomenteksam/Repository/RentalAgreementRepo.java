@@ -23,7 +23,7 @@ public class RentalAgreementRepo {
       while(resultSet.next()){
         carrental.add(new RentalAgreementsModel(
             resultSet.getInt("vehicleNumber"),
-            resultSet.getInt("id"),
+            //resultSet.getInt("id"),
             resultSet.getString("name"),
             resultSet.getString("address"),
             resultSet.getString("email"),
@@ -37,19 +37,31 @@ public class RentalAgreementRepo {
     }
     return carrental;
 }
+
+public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
+    try{
+      PreparedStatement psts = conn.prepareStatement("SELECT * FROM Car.RentalAgreements WHERE id=?");
+          psts.setInt(1,vehicleNumber);
+      ResultSet resultSet = psts.executeQuery();
+    }catch(SQLException e){
+      System.out.println("Error getrentalagreementsmodel");
+      e.printStackTrace();
+    }return null;
+}
+
   public void createRentalAgreement(RentalAgreementsModel rentalAgreementsModel) {
 
     try {
       PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.RentalAgreements (vehicleNumber,id,name,email,phonenumber,address,rentalPeriod,price) VALUES (?,?,?,?,?,?,?,?) ");
 
       psts.setInt(1, rentalAgreementsModel.getVehicleNumber());
-      psts.setInt(2, rentalAgreementsModel.getId());
-      psts.setString(3, rentalAgreementsModel.getName());
-      psts.setString(4, rentalAgreementsModel.getEmail());
-      psts.setInt(5, rentalAgreementsModel.getPhonenumber());
-      psts.setString(6, rentalAgreementsModel.getAddress());
-      psts.setString(7, rentalAgreementsModel.getRentalPeriod());
-      psts.setDouble(8, rentalAgreementsModel.getPrice());
+      //psts.setInt(2, rentalAgreementsModel.getId());
+      psts.setString(2, rentalAgreementsModel.getName());
+      psts.setString(3, rentalAgreementsModel.getEmail());
+      psts.setInt(4, rentalAgreementsModel.getPhonenumber());
+      psts.setString(5, rentalAgreementsModel.getAddress());
+      psts.setString(6, rentalAgreementsModel.getRentalPeriod());
+      psts.setDouble(7, rentalAgreementsModel.getPrice());
       psts.executeUpdate();
 
     }catch (SQLException e){

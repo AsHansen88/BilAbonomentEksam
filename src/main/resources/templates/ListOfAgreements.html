@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ListOfAgreement</title>
+</head>
+<body>
+
+<table id="Aftaler">
+
+ <tr>
+    <th>vehicleNumber</th>
+    <th>name</th>
+    <th>email</th>
+    <th>phoneNumber</th>
+    <th>address</th>
+    <th>rentalPeriod</th>
+    <th>Price</th>
+
+ </tr>
+
+    <tr   th:each= "RentalAgreementRepo : ${Aftaler}">
+
+    <td th:text="${RentalAgreementRepo.vehicleNumber}"></td>
+    <td th:text="${RentalAgreementRepo.name}"></td>
+    <td th:text="${RentalAgreementRepo.email}"></td>
+    <td th:text="${RentalAgreementRepo.phonenumber}"></td>
+    <td th:text="${RentalAgreementRepo.address}"></td>
+    <td th:text="${RentalAgreementRepo.rentalPeriod}"></td>
+    <td th:text="${RentalAgreementRepo.price}"></td>
+
+</tr>
+
+</table>
+</body>
+</html>

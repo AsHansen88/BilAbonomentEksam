@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
 import java.util.List;
@@ -34,20 +35,7 @@ public class CarHomeController {
     return "udvalg";
   }
 
-  @GetMapping("/aftaler")
-  public String rentalAgreements(){
-    service.getAllCarAgreements();
-
-    return "aftaler";
-  }
-
-  @PostMapping("/aftaler")
-  public String aftaler(WebRequest payload){
-    service.createRentalAgreement(payload);
-    return "redirect:/aftaler";
-  }
-
-        @GetMapping("/tilbagelevering")
+  @GetMapping("/tilbagelevering")
         public String tilbagelevering(){
     return "tilbagelevering";
         }
