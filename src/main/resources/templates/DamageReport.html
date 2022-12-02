@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapporter din skade</title>
+</head>
+<h1>Rapporter skade</h1>
+<body>
+
+
+<form action="/DamageReport" method="post">
+
+
+    <label for="damageId">DamageId</label><br>
+    <input type="number" name="damageId"><br>
+    <label for="damageReportDescription">Description</label><br>
+    <input type="text" name="damageReportDescription"><br>
+    <label for="damageTitle">DamageTitle</label><br>
+    <input type="text" name="damageTitle"></br>
+    <label for="damagePrice">DamagePrice</label><br>
+    <input type="number" name="damagePrice"><br>
+    <label for="vehicleNumber">vehicleNumber</label><br>
+    <input type="number" name="vehicleNumber"><br>
+    <label for="kmTraveledOverLimit">kmTraveledOverLimit</label><br>
+    <input type="number" name="kmTraveledOverLimit"><br>
+    <label for="totalDamageCost">totalDamageCost</label><br>
+    <input type="number" name="totalDamageCost"><br>
+
+    <form action="ListOfDamageReports.html">
+        <input type="submit"/>
+    </form>
+</form>
+</body>
+</html>

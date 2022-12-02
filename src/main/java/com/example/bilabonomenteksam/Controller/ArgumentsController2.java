@@ -20,7 +20,7 @@ public class ArgumentsController2 {
   @PostMapping("/aftaler")
   public String aftaler(WebRequest payload) {
     service2.createRentalAgreement(payload);
-    return "ListOfAgreements";
+    return "ListOfDamageReports";
   }
 
 }

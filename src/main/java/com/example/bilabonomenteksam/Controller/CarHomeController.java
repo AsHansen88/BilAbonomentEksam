@@ -6,6 +6,7 @@ import com.example.bilabonomenteksam.Repository.CarlistRepo;
 import com.example.bilabonomenteksam.Repository.IRepo;
 import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
 import com.example.bilabonomenteksam.Service.CarService;
+import com.example.bilabonomenteksam.Service.DamageReportService;
 import com.example.bilabonomenteksam.Service.RentalAgreementsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,7 @@ public class CarHomeController {
   private final IRepo<CarModel> CarRepo = new CarlistRepo();
   RentalAgreementsService service= new RentalAgreementsService();
   RentalAgreementRepo repoagreement = new RentalAgreementRepo();
+  DamageReportService damageservice = new DamageReportService();
 
 
   @GetMapping("/")
@@ -35,16 +37,24 @@ public class CarHomeController {
     return "udvalg";
   }
 
+  /*
   @GetMapping("/tilbagelevering")
         public String tilbagelevering(){
     return "tilbagelevering";
         }
-
+*/
   @GetMapping("/ListOfAgreements")
   public String alleAftaler(Model model){
     model.addAttribute("Aftaler", service.getAllCarAgreements());
     return "ListOfAgreements";
   }
+
+  @GetMapping("/ListOfDamageReports")
+  public String allDamage(Model model){
+    model.addAttribute("DamageReport", damageservice.getAllDamageReport());
+  return "ListOfDamageReports";
+  }
+
 
 
     //return aftaler;
