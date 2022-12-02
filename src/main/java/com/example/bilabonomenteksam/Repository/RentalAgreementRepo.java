@@ -52,7 +52,7 @@ public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
   public void createRentalAgreement(RentalAgreementsModel rentalAgreementsModel) {
 
     try {
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.RentalAgreements (vehicleNumber,id,name,email,phonenumber,address,rentalPeriod,price) VALUES (?,?,?,?,?,?,?,?) ");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.RentalAgreements (vehicleNumber,name,email,phonenumber,address,rentalPeriod,price) VALUES (?,?,?,?,?,?,?)");
 
       psts.setInt(1, rentalAgreementsModel.getVehicleNumber());
       //psts.setInt(2, rentalAgreementsModel.getId());

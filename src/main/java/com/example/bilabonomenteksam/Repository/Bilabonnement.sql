@@ -48,6 +48,8 @@ INSERT INTO ListOfCars(vehicleNumber, frameNumber, make, model, equipmentLevel, 
 INSERT INTO RentalAgreements(id, name, email, phoneNumber,address, rentalPeriod, price)  VALUES(1,'Test','Test@test.test',12345,'test vej nr. 21','Et antal måneder',4000);
 SELECT * FROM ListOfCars Inner JOIN RentalAgreements on ListOfCars.vehicleNumber = RentalAgreements.id=1;
 
+select * from RentalAgreements;
+
 SELECT * FROM ListOfCars;
 SELECT * FROM RentalAgreements;
 DROP DATABASE Car;
