@@ -35,10 +35,16 @@
         <td th:text="${CarlistRepo.steelPrice}"></td>
         <td th:text="${CarlistRepo.reg_Charge}"></td>
         <td th:text="${CarlistRepo.co2_Emmission}"></td>
-        <td th:text="${CarlistRepo.status}"></td>
+        <td><input type="checkbox" id="status" name="status" value="status"></td>
 
+
+      <!--  <input type="checkbox" id="status" name="status" value="status"> -->
     </tr>
 </table>
+<form action="aftaler">
+    <input type="submit"/>
+</form>
+
 </body>
 </html>
 
