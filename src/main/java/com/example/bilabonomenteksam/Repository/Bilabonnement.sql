@@ -2,9 +2,6 @@ CREATE DATABASE Car;
 
 USE Car;
 
-
-
-
 CREATE TABLE ListOfCars
 (
     vehicleNumber    INT,
@@ -35,6 +32,8 @@ CREATE TABLE RentalAgreements
 
 CREATE TABLE DamageReports
 (
+    startDate DATE,
+    endDate DATE,
     damageId int AUTO_INCREMENT,
     damageReportDescription varchar(200),
     damageTitle varchar(50),

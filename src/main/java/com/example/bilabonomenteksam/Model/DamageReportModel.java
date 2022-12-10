@@ -1,5 +1,7 @@
 package com.example.bilabonomenteksam.Model;
 
+import java.sql.Date;
+
 public class DamageReportModel {
 
 private int damageId;
@@ -9,9 +11,15 @@ private double damagePrice;
 private int vehicleNumber;
 private double kmTraveledOverLimit;
 private double totalDamageCost;
+private Date startDate;
+private Date endDate;
 
+  public DamageReportModel(Date startDate, Date endDate, int damageId, String damageReportDescription, String damageTitle, double damagePrice, int vehicleNumber, double kmTraveledOverLimit, double totalDamageCost) {
 
-  public DamageReportModel(int damageId, String damageReportDescription, String damageTitle, double damagePrice, int vehicleNumber, double kmTraveledOverLimit, double totalDamageCost) {
+    System.out.printf("\n Reached: %s", startDate.toString());
+
+    this.startDate = startDate;
+    this.endDate = endDate;
     this.damageId = damageId;
     this.damageReportDescription = damageReportDescription;
     this.damageTitle = damageTitle;
@@ -19,6 +27,7 @@ private double totalDamageCost;
     this.vehicleNumber = vehicleNumber;
     this.kmTraveledOverLimit = kmTraveledOverLimit;
     this.totalDamageCost = totalDamageCost;
+
   }
 
   public int getDamageId() {
@@ -77,9 +86,27 @@ private double totalDamageCost;
     this.totalDamageCost = totalDamageCost;
   }
 
+  public Date getStartDate() {
+    return startDate;
+  }
+
+  public void setStartDate(Date startDate) {
+    this.startDate = startDate;
+  }
+
+  public Date getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(Date endDate) {
+    this.endDate = endDate;
+  }
+
+
   @Override
   public String toString() {
-    return "DamageReportModel{" +
+    return "startDate" + startDate +
+        "endDate" + endDate + "DamageReportModel{" +
         "damageId='" + damageId +
         "damageReportDescription='" + damageReportDescription + '\'' +
         ", damageTitle='" + damageTitle + '\'' +

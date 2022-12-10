@@ -22,6 +22,8 @@ try {
 
   while(resultSet.next()){
     Damage.add(new DamageReportModel(
+        resultSet.getDate("startDate"),
+        resultSet.getDate("endDate"),
         resultSet.getInt("damageId"),
         resultSet.getString("damageReportDescription"),
         resultSet.getString("damageTitle"),

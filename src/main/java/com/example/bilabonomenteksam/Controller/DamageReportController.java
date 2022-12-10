@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
+
 @Controller
 public class DamageReportController {
 
@@ -19,7 +23,11 @@ public class DamageReportController {
   @PostMapping("/DamageReport")
   public String DamageReport(WebRequest payload){
     damageService.createDamageReport(payload);
+    Date startDate = Date.valueOf(payload.getParameter("startDate"));
+    Date endDate = Date.valueOf(payload.getParameter("endDate"));
+
     return "ListOfDamageReports";
+
   }
 
 }

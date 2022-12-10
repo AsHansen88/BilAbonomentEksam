@@ -22,6 +22,8 @@
 
     <tr   th:each= "DamageReportRepo : ${DamageReport}">
 
+        <td th:text="${DamageReportRepo.startDate}"></td>
+        <td th:text="${DamageReportRepo.endDate}"}></td>
         <td th:text="${DamageReportRepo.damageId}"></td>
         <td th:text="${DamageReportRepo.damageReportDescription}"></td>
         <td th:text="${DamageReportRepo.damageTitle}"></td>
