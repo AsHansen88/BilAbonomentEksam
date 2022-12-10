@@ -65,6 +65,8 @@ select * from RentalAgreements;
 
 SELECT * FROM ListOfCars;
 SELECT * FROM RentalAgreements;
+SELECT * FROM DamageReports;
+
 DROP DATABASE Car;
 DROP TABLE ListOfCars;
 DROP TABLE RentalAgreements;

@@ -3,6 +3,7 @@ package com.example.bilabonomenteksam.Service;
 import com.example.bilabonomenteksam.Controller.ArgumentsController2;
 import com.example.bilabonomenteksam.Model.DamageReportModel;
 import com.example.bilabonomenteksam.Repository.DamageReportRepo;
+import org.springframework.beans.factory.wiring.ClassNameBeanWiringInfoResolver;
 import org.springframework.web.context.request.WebRequest;
 
 import java.lang.reflect.Type;
@@ -53,6 +54,36 @@ public class DamageReportService {
 
   }
 
+  class MyClass{
+    int my = 4;
+    MyClass(int myi)
+    {
+      my=myi;
+    }
+  }
 
+
+
+  public MyClass myMethod()
+  {
+    return new MyClass(7);
+  }
+
+  public void usingmyclass()
+  {
+    MyClass mynewclass = myMethod();
+  }
 
 }
+
+//  Date(classname)||.valueOf(methodname)||(damageReq(classname)||.getParameter(methodname)||("startDate"(Typeínput)));
+//    ClassName.Methodname1(ClassName.Methodname2(input)); -> Classname.Mehodname1(input); -isinput> Classname.Methodname2(input2); ---- hvad er typen på damageReq?
+//    damageRepo.createDamageReport(damageReportModel);
+//
+//
+//public int asdjhl(){
+//    int myint;
+//    }
+//public String alskdf(){
+//    new String(); -> instantiate..
+//    }
