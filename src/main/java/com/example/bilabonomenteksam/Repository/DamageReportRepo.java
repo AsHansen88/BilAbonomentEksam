@@ -54,13 +54,15 @@ public DamageReportModel getDamageReportModel (int damageId){
 
 public void createDamageReport(DamageReportModel damageReportModel){
   try{
-    PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.DamageReports (damageReportDescription,damageTitle,damagePrice, vehicleNumber,kmTraveledOverLimit,totalDamageCost) VALUES (?,?,?,?,?,?)");
-    psts.setString(1, damageReportModel.getDamageReportDescription());
-    psts.setString(2, damageReportModel.getDamageTitle());
-    psts.setDouble(3,damageReportModel.getDamagePrice());
-    psts.setInt(4,damageReportModel.getVehicleNumber());
-    psts.setDouble(5,damageReportModel.getKmTraveledOverLimit());
-    psts.setDouble(6,damageReportModel.getTotalDamageCost());
+    PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.DamageReports (startDate,endDate,damageReportDescription,damageTitle,damagePrice, vehicleNumber,kmTraveledOverLimit,totalDamageCost) VALUES (?,?,?,?,?,?,?,?)");
+    psts.setDate(1,damageReportModel.getStartDate());
+    psts.setDate(2,damageReportModel.getEndDate());
+    psts.setString(3, damageReportModel.getDamageReportDescription());
+    psts.setString(4, damageReportModel.getDamageTitle());
+    psts.setDouble(5,damageReportModel.getDamagePrice());
+    psts.setInt(6,damageReportModel.getVehicleNumber());
+    psts.setDouble(7,damageReportModel.getKmTraveledOverLimit());
+    psts.setDouble(8,damageReportModel.getTotalDamageCost());
     psts.executeUpdate();
 
   }catch (SQLException e){

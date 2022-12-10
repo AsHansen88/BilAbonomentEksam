@@ -18,6 +18,8 @@ CREATE TABLE ListOfCars
 
 CREATE TABLE RentalAgreements
 (
+    startDate DATE,
+    endDate DATE,
     id INT AUTO_INCREMENT,
     vehicleNumber int,
     name VARCHAR(50),

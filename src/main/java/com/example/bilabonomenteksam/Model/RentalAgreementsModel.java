@@ -1,5 +1,7 @@
 package com.example.bilabonomenteksam.Model;
 
+import java.sql.Date;
+
 public class RentalAgreementsModel {
 
   private int vehicleNumber;
@@ -10,6 +12,8 @@ public class RentalAgreementsModel {
   private String address;
   private String rentalPeriod;
   private double price;
+  private Date startDate;
+  private Date endDate;
 
 /*
   public RentalAgreementsCreateModel(int vehicleNumber, String name, String email, int phonenumber,String address, String rentalPeriod, double price) {
@@ -102,9 +106,27 @@ public class RentalAgreementsModel {
     this.address = address;
   }
 
+  public Date getStartDate() {
+    return startDate;
+  }
+
+  public void setStartDate(Date startDate) {
+    this.startDate = startDate;
+  }
+
+  public Date getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(Date endDate) {
+    this.endDate = endDate;
+  }
+
   @Override
   public String toString() {
-    return "RentalAgreementsModel{" +
+    return "startDate" + startDate +
+        "endDate" + endDate +
+        "RentalAgreementsModel{" +
         "frameNumber=" + vehicleNumber +
         ", id=" + id +
         ", name='" + name + '\'' +
