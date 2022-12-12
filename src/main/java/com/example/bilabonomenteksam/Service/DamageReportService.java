@@ -25,8 +25,7 @@ public class DamageReportService {
   public void createDamageReport(WebRequest damageReq) {
 
 
-    DamageReportModel damageReportModel = new DamageReportModel(Date.valueOf(damageReq.getParameter("startDate")),
-        Date.valueOf(damageReq.getParameter("endDate")),
+    DamageReportModel damageReportModel = new DamageReportModel(Date.valueOf(damageReq.getParameter("Date")),
         Integer.parseInt(damageReq.getParameter("damageId")),
         damageReq.getParameter("damageReportDescription"),
         damageReq.getParameter("damageTitle"),

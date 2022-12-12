@@ -23,8 +23,7 @@ public class DamageReportController {
   @PostMapping("/DamageReport")
   public String DamageReport(WebRequest payload){
     damageService.createDamageReport(payload);
-    Date startDate = Date.valueOf(payload.getParameter("startDate"));
-    Date endDate = Date.valueOf(payload.getParameter("endDate"));
+    Date startDate = Date.valueOf(payload.getParameter("Date"));
 
     return "ListOfDamageReports";
 

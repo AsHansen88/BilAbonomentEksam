@@ -11,15 +11,13 @@ private double damagePrice;
 private int vehicleNumber;
 private double kmTraveledOverLimit;
 private double totalDamageCost;
-private Date startDate;
-private Date endDate;
+private Date date;
 
-  public DamageReportModel(Date startDate, Date endDate, int damageId, String damageReportDescription, String damageTitle, double damagePrice, int vehicleNumber, double kmTraveledOverLimit, double totalDamageCost) {
 
-    System.out.printf("\n Reached: %s", startDate.toString());
+  public DamageReportModel(Date date, int damageId, String damageReportDescription, String damageTitle, double damagePrice, int vehicleNumber, double kmTraveledOverLimit, double totalDamageCost) {
 
-    this.startDate = startDate;
-    this.endDate = endDate;
+
+    this.date = date;
     this.damageId = damageId;
     this.damageReportDescription = damageReportDescription;
     this.damageTitle = damageTitle;
