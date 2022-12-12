@@ -22,6 +22,8 @@ public class RentalAgreementRepo {
 
       while(resultSet.next()){
         carrental.add(new RentalAgreementsModel(
+            resultSet.getDate("startDate"),
+            resultSet.getDate("endDate"),
             resultSet.getInt("vehicleNumber"),
             //resultSet.getInt("id"),
             resultSet.getString("name"),
@@ -52,16 +54,17 @@ public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
   public void createRentalAgreement(RentalAgreementsModel rentalAgreementsModel) {
 
     try {
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.RentalAgreements (vehicleNumber,name,email,phonenumber,address,rentalPeriod,price) VALUES (?,?,?,?,?,?,?)");
+      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.RentalAgreements (startDate,endDate,vehicleNumber,name,email,phonenumber,address,rentalPeriod,price) VALUES (?,?,?,?,?,?,?,?,?)");
 
-      psts.setInt(1, rentalAgreementsModel.getVehicleNumber());
-      //psts.setInt(2, rentalAgreementsModel.getId());
-      psts.setString(2, rentalAgreementsModel.getName());
-      psts.setString(3, rentalAgreementsModel.getEmail());
-      psts.setInt(4, rentalAgreementsModel.getPhonenumber());
-      psts.setString(5, rentalAgreementsModel.getAddress());
-      psts.setString(6, rentalAgreementsModel.getRentalPeriod());
-      psts.setDouble(7, rentalAgreementsModel.getPrice());
+      psts.setDate(1,rentalAgreementsModel.getStartDate());
+      psts.setDate(2,rentalAgreementsModel.getEndDate());
+      psts.setInt(3, rentalAgreementsModel.getVehicleNumber());
+      psts.setString(4, rentalAgreementsModel.getName());
+      psts.setString(5, rentalAgreementsModel.getEmail());
+      psts.setInt(6, rentalAgreementsModel.getPhonenumber());
+      psts.setString(7, rentalAgreementsModel.getAddress());
+      psts.setString(8, rentalAgreementsModel.getRentalPeriod());
+      psts.setDouble(9, rentalAgreementsModel.getPrice());
       psts.executeUpdate();
 
     }catch (SQLException e){

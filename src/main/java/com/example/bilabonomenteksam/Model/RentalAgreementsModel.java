@@ -27,7 +27,9 @@ public class RentalAgreementsModel {
     this.price = price;
   }
 */
-  public RentalAgreementsModel(int vehicleNumber, /*int id,*/ String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
+  public RentalAgreementsModel(Date startDate, Date endDate, int vehicleNumber, /*int id,*/ String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
+    this.startDate = startDate;
+    this.endDate = endDate;
     this.vehicleNumber = vehicleNumber;
     //this.id = id;
     this.name = name;
@@ -39,9 +41,6 @@ public class RentalAgreementsModel {
 
   }
 
- /* public RentalAgreementsModel(String vehicleNumber, String id, String name, String email, String phonenumber, String address, String rentalPeriod, String price, String parameter) {
-  }
-*/
   public int getVehicleNumber() {
     return vehicleNumber;
   }

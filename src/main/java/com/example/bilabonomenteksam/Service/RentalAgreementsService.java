@@ -4,6 +4,7 @@ import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
 import org.springframework.web.context.request.WebRequest;
 
+import java.sql.Date;
 import java.util.List;
 
 public class RentalAgreementsService {
@@ -19,8 +20,9 @@ public class RentalAgreementsService {
 
   public void createRentalAgreement(WebRequest req){
 
-    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(Integer.parseInt(req.getParameter("vehicleNumber")),
-        //Integer.parseInt(req.getParameter("id")),
+    RentalAgreementsModel rentalAgreementsModel = new RentalAgreementsModel(Date.valueOf(req.getParameter("startDate")),
+        Date.valueOf(req.getParameter("endDate")),
+        Integer.parseInt(req.getParameter("vehicleNumber")),
         req.getParameter("name"),
         req.getParameter("email"),
         req.getParameter("address"),

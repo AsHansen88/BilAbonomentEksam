@@ -9,6 +9,9 @@
 <table id="Aftaler">
 
  <tr>
+
+    <th>startDate</th>
+    <th>endDate</th>
     <th>vehicleNumber</th>
     <th>name</th>
     <th>email</th>
@@ -21,6 +24,8 @@
 
     <tr   th:each= "RentalAgreementRepo : ${Aftaler}">
 
+    <td th:text="${RentalAgreementRepo.startDate}"></td>
+    <td th:text="${RentalAgreementRepo.endDate}"}></td>
     <td th:text="${RentalAgreementRepo.vehicleNumber}"></td>
     <td th:text="${RentalAgreementRepo.name}"></td>
     <td th:text="${RentalAgreementRepo.email}"></td>
