@@ -34,8 +34,7 @@ CREATE TABLE RentalAgreements
 
 CREATE TABLE DamageReports
 (
-    startDate DATE,
-    endDate DATE,
+    date Date,
     damageId int AUTO_INCREMENT,
     damageReportDescription varchar(200),
     damageTitle varchar(50),

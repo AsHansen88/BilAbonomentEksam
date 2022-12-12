@@ -84,27 +84,13 @@ private Date date;
     this.totalDamageCost = totalDamageCost;
   }
 
-  public Date getStartDate() {
-    return startDate;
+  public Date getDate() {
+    return date;
   }
-
-  public void setStartDate(Date startDate) {
-    this.startDate = startDate;
-  }
-
-  public Date getEndDate() {
-    return endDate;
-  }
-
-  public void setEndDate(Date endDate) {
-    this.endDate = endDate;
-  }
-
 
   @Override
   public String toString() {
-    return "startDate" + startDate +
-        "endDate" + endDate + "DamageReportModel{" +
+    return "date" + date + "DamageReportModel{" +
         "damageId='" + damageId +
         "damageReportDescription='" + damageReportDescription + '\'' +
         ", damageTitle='" + damageTitle + '\'' +

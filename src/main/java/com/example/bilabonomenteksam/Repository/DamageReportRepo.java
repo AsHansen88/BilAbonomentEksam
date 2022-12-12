@@ -22,8 +22,7 @@ try {
 
   while(resultSet.next()){
     Damage.add(new DamageReportModel(
-        resultSet.getDate("startDate"),
-        resultSet.getDate("endDate"),
+        resultSet.getDate("date"),
         resultSet.getInt("damageId"),
         resultSet.getString("damageReportDescription"),
         resultSet.getString("damageTitle"),
@@ -54,15 +53,14 @@ public DamageReportModel getDamageReportModel (int damageId){
 
 public void createDamageReport(DamageReportModel damageReportModel){
   try{
-    PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.DamageReports (startDate,endDate,damageReportDescription,damageTitle,damagePrice, vehicleNumber,kmTraveledOverLimit,totalDamageCost) VALUES (?,?,?,?,?,?,?,?)");
-    psts.setDate(1,damageReportModel.getStartDate());
-    psts.setDate(2,damageReportModel.getEndDate());
-    psts.setString(3, damageReportModel.getDamageReportDescription());
-    psts.setString(4, damageReportModel.getDamageTitle());
-    psts.setDouble(5,damageReportModel.getDamagePrice());
-    psts.setInt(6,damageReportModel.getVehicleNumber());
-    psts.setDouble(7,damageReportModel.getKmTraveledOverLimit());
-    psts.setDouble(8,damageReportModel.getTotalDamageCost());
+    PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.DamageReports (date,damageReportDescription,damageTitle,damagePrice, vehicleNumber,kmTraveledOverLimit,totalDamageCost) VALUES (?,?,?,?,?,?,?)");
+    psts.setDate(1,damageReportModel.getDate());
+    psts.setString(2, damageReportModel.getDamageReportDescription());
+    psts.setString(3, damageReportModel.getDamageTitle());
+    psts.setDouble(4,damageReportModel.getDamagePrice());
+    psts.setInt(5,damageReportModel.getVehicleNumber());
+    psts.setDouble(6,damageReportModel.getKmTraveledOverLimit());
+    psts.setDouble(7,damageReportModel.getTotalDamageCost());
     psts.executeUpdate();
 
   }catch (SQLException e){

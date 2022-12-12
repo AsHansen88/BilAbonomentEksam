@@ -9,8 +9,7 @@
 <table id="DamageReports">
 
     <tr>
-        <th>startDate</th>
-        <th>endDate</th>
+        <th>date</th>
         <th>damageId</th>
         <th>damageReportDescription</th>
         <th>damageTitle</th>
@@ -24,8 +23,7 @@
 
     <tr   th:each= "DamageReportRepo : ${DamageReport}">
 
-        <td th:text="${DamageReportRepo.startDate}"></td>
-        <td th:text="${DamageReportRepo.endDate}"}></td>
+        <td th:text="${DamageReportRepo.date}"></td>
         <td th:text="${DamageReportRepo.damageId}"></td>
         <td th:text="${DamageReportRepo.damageReportDescription}"></td>
         <td th:text="${DamageReportRepo.damageTitle}"></td>
