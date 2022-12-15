@@ -1,6 +1,5 @@
 package com.example.bilabonomenteksam.Controller;
 
-import com.example.bilabonomenteksam.Service.DamageReportService;
 import com.example.bilabonomenteksam.Service.RentalAgreementsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

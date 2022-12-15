@@ -39,12 +39,6 @@ public class CarHomeController {
     return "udvalg";
   }
 
-  /*
-  @GetMapping("/tilbagelevering")
-        public String tilbagelevering(){
-    return "tilbagelevering";
-        }
-*/
   @GetMapping("/ListOfAgreements")
   public String alleAftaler(Model model){
     model.addAttribute("Aftaler", service.getAllCarAgreements());
@@ -60,7 +54,6 @@ public class CarHomeController {
 
 
 
-    //return aftaler;
  }
 
 

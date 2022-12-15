@@ -25,7 +25,6 @@ public class RentalAgreementRepo {
             resultSet.getDate("startDate"),
             resultSet.getDate("endDate"),
             resultSet.getInt("vehicleNumber"),
-            //resultSet.getInt("id"),
             resultSet.getString("name"),
             resultSet.getString("address"),
             resultSet.getString("email"),

@@ -50,28 +50,8 @@ public class CarlistRepo implements IRepo<CarModel> {
   }
 
 
-  public void createDriver(CarModel bil) {
-
-    try {
-      PreparedStatement psts = conn.prepareStatement("INSERT INTO Car.ListOfCars (Vognnummer,Stelnummmer,Mærke,Model,udstyrsniveau,stålpris,reg_afgift,co2_udledning) VALUES (?,?,?,?,?,?,?,?,?)");
-
-      psts.setInt(1,bil.getVehicleNumber());
-      psts.setInt(2, bil.getFrameNumber());
-      psts.setString(3, bil.getMake());
-      psts.setString(4, bil.getModel());
-      psts.setInt(5, bil.getEquipmentLevel());
-      psts.setDouble(6, bil.getSteelPrice());
-      psts.setDouble(7, bil.getReg_Charge());
-      psts.setDouble(8, bil.getCo2_Emmission());
-      psts.setString(9, bil.getStatus());
-      psts.executeUpdate();
-    }catch (SQLException e){
-      System.out.println("Error at createBilList");
-      e.printStackTrace();
-
-    }
-
   }
+
 
 
 

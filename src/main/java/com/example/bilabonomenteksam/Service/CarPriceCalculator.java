@@ -13,9 +13,5 @@ public class CarPriceCalculator {
     }
     return Integer.toString(sum);
   }
-public String PriceOfCars(List<RentalAgreementsModel>c){
-    return Integer.toString(c.size());
-
-  }
 
 }

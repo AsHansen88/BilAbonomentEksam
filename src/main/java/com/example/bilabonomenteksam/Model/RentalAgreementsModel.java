@@ -15,23 +15,11 @@ public class RentalAgreementsModel {
   private Date startDate;
   private Date endDate;
 
-/*
-  public RentalAgreementsCreateModel(int vehicleNumber, String name, String email, int phonenumber,String address, String rentalPeriod, double price) {
-    this.vehicleNumber = vehicleNumber;
-    //this.id = id;
-    this.name = name;
-    this.email = email;
-    this.phonenumber = phonenumber;
-    this.address = address;
-    this.rentalPeriod = rentalPeriod;
-    this.price = price;
-  }
-*/
-  public RentalAgreementsModel(Date startDate, Date endDate, int vehicleNumber, /*int id,*/ String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
+
+  public RentalAgreementsModel(Date startDate, Date endDate, int vehicleNumber, String name, String address, String email, int phonenumber, String rentalPeriod, double price) {
     this.startDate = startDate;
     this.endDate = endDate;
     this.vehicleNumber = vehicleNumber;
-    //this.id = id;
     this.name = name;
     this.email = email;
     this.phonenumber = phonenumber;
