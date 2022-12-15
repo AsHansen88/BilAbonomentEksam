@@ -2,6 +2,8 @@ package com.example.bilabonomenteksam.Model;
 
 import java.sql.Date;
 
+//Anders og Jon
+
 public class DamageReportModel {
 
 private int damageId;

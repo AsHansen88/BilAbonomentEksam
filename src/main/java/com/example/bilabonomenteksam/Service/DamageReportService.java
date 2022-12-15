@@ -8,6 +8,7 @@ import org.springframework.web.context.request.WebRequest;
 import java.sql.Date;
 import java.util.List;
 
+//Anders og Jon
 
 public class DamageReportService {
 

@@ -5,8 +5,9 @@ import com.example.bilabonomenteksam.Service.RentalAgreementsService;
 import org.springframework.web.bind.annotation.*;
 
 
-
 import java.util.List;
+
+//Anders og Jon
 
 @RestController
 public class AgreementsController {
@@ -17,7 +18,7 @@ public class AgreementsController {
 
 
   @GetMapping("/addtoaftaler")
-  public List<RentalAgreementsModel> addtoaftaler(){
+  public List<RentalAgreementsModel> addToAgreements(){
       return service2.getAllCarAgreements();
   }
 

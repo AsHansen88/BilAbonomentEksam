@@ -4,6 +4,8 @@ import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 
 import java.util.List;
 
+//Anders og Jon
+
 public class CarPriceCalculator {
 
   public String CalculatePrice(List<RentalAgreementsModel> c){

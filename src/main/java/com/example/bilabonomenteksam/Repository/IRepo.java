@@ -4,6 +4,8 @@ import com.example.bilabonomenteksam.Model.CarModel;
 
 import java.util.List;
 
+//Anders og Jon
+
 public interface IRepo<T> {
 
   List<T> getAllCar();

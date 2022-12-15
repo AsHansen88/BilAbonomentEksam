@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//Anders og Jon
+
 public class CarlistRepo implements IRepo<CarModel> {
 
   private Connection conn = DBConnect.getConnection();

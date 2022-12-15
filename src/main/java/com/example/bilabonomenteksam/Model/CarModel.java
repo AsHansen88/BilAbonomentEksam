@@ -1,5 +1,7 @@
 package com.example.bilabonomenteksam.Model;
 
+//Anders og Jon
+
 public class CarModel {
 
   private int vehicleNumber;

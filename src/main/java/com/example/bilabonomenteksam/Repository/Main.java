@@ -3,6 +3,8 @@ package com.example.bilabonomenteksam.Repository;
 
 public class Main {
 
+  //Anders og Jon
+
   public static void main(String[] args) {
 
     DBConnect.getConnection();

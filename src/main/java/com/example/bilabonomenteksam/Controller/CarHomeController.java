@@ -1,23 +1,17 @@
 package com.example.bilabonomenteksam.Controller;
 
 import com.example.bilabonomenteksam.Model.CarModel;
-import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 import com.example.bilabonomenteksam.Repository.CarlistRepo;
 import com.example.bilabonomenteksam.Repository.IRepo;
 import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
 import com.example.bilabonomenteksam.Service.CarPriceCalculator;
-import com.example.bilabonomenteksam.Service.CarService;
 import com.example.bilabonomenteksam.Service.DamageReportService;
 import com.example.bilabonomenteksam.Service.RentalAgreementsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.WebRequest;
 
-import java.util.List;
+//Anders og Jon
 
 @Controller
 public class CarHomeController {
@@ -40,7 +34,7 @@ public class CarHomeController {
   }
 
   @GetMapping("/ListOfAgreements")
-  public String alleAftaler(Model model){
+  public String allAgreements(Model model){
     model.addAttribute("Aftaler", service.getAllCarAgreements());
     model.addAttribute("sum", carPrice.CalculatePrice(repoagreement.getallCaragreements()));
     return "ListOfAgreements";

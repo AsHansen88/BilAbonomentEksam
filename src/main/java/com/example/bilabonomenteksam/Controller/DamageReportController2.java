@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+//Anders og Jon
+
 @RestController
 public class DamageReportController2 {
 

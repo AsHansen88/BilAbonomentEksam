@@ -6,6 +6,8 @@ import com.example.bilabonomenteksam.Repository.CarlistRepo;
 
 import java.util.List;
 
+//Anders og Jon
+
 public class CarService {
 
 CarlistRepo carL = new CarlistRepo(); {

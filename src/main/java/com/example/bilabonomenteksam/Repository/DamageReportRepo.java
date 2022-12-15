@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//Anders og Jon
+
 public class DamageReportRepo {
 
 private Connection conn = DBConnect.getConnection();
