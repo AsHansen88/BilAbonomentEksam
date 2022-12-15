@@ -1,12 +1,15 @@
 package com.example.bilabonomenteksam.Controller;
 
 import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
+import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
+import com.example.bilabonomenteksam.Service.CarPriceCalculator;
 import com.example.bilabonomenteksam.Service.RentalAgreementsService;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.request.WebRequest;
 
+
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -14,11 +17,14 @@ public class AgreementsController {
 
 
   RentalAgreementsService service2 = new RentalAgreementsService();
+  RentalAgreementRepo RentalRepo = new RentalAgreementRepo();
+  List<RentalAgreementsModel> basketofCars = new ArrayList<>();
+  CarPriceCalculator calculatorService = new CarPriceCalculator();
 
 
   @GetMapping("/addtoaftaler")
   public List<RentalAgreementsModel> addtoaftaler(){
-   return service2.getAllCarAgreements();
+      return service2.getAllCarAgreements();
   }
 
     @GetMapping("aftale")

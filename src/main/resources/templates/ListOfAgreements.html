@@ -35,8 +35,29 @@
     <td th:text="${RentalAgreementRepo.rentalPeriod}"></td>
     <td th:text="${RentalAgreementRepo.price}"></td>
 
+
 </tr>
 
+
 </table>
+
+<table class="table table-striped table-dark">
+   <tr>
+      <th>Car</th>
+      <th>Price</th>
+   </tr>
+   <tr th:each="ListOfAgreements : ${ListOfAgreements}">
+      <td th:text="${ListOfAgreements.name}"></td>
+      <td th:number="${ListOfAgreements.price}"></td>
+
+   </tr>
+   <tr>
+      <th>Total</th>
+      <th th:text="${sum}"></th>
+
+
+   </tr>
+</table>
+
 </body>
 </html>

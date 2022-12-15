@@ -5,6 +5,7 @@ import com.example.bilabonomenteksam.Model.RentalAgreementsModel;
 import com.example.bilabonomenteksam.Repository.CarlistRepo;
 import com.example.bilabonomenteksam.Repository.IRepo;
 import com.example.bilabonomenteksam.Repository.RentalAgreementRepo;
+import com.example.bilabonomenteksam.Service.CarPriceCalculator;
 import com.example.bilabonomenteksam.Service.CarService;
 import com.example.bilabonomenteksam.Service.DamageReportService;
 import com.example.bilabonomenteksam.Service.RentalAgreementsService;
@@ -21,10 +22,11 @@ import java.util.List;
 @Controller
 public class CarHomeController {
 
-  private final IRepo<CarModel> CarRepo = new CarlistRepo();
+  private final IRepo<CarModel> carRepo = new CarlistRepo();
   RentalAgreementsService service= new RentalAgreementsService();
   RentalAgreementRepo repoagreement = new RentalAgreementRepo();
   DamageReportService damageservice = new DamageReportService();
+  CarPriceCalculator carPrice = new CarPriceCalculator();
 
 
   @GetMapping("/")
@@ -33,7 +35,7 @@ public class CarHomeController {
   }
   @GetMapping("/udvalg")
   public String alleBiler(Model model){
-    model.addAttribute("udvalgt", CarRepo.getAllCar());
+    model.addAttribute("udvalgt", carRepo.getAllCar());
     return "udvalg";
   }
 
@@ -46,6 +48,7 @@ public class CarHomeController {
   @GetMapping("/ListOfAgreements")
   public String alleAftaler(Model model){
     model.addAttribute("Aftaler", service.getAllCarAgreements());
+    model.addAttribute("sum", carPrice.CalculatePrice(repoagreement.getallCaragreements()));
     return "ListOfAgreements";
   }
 
