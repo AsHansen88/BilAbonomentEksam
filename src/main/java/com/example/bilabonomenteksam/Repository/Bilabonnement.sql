@@ -1,3 +1,6 @@
+
+-- Anders og Jon
+
 CREATE DATABASE Car;
 
 USE Car;

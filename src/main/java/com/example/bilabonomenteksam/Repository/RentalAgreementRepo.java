@@ -41,7 +41,7 @@ public class RentalAgreementRepo {
     return carrental;
 }
 
-public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
+public RentalAgreementsModel getRentalAgreementsModel(int vehicleNumber){
     try{
       PreparedStatement psts = conn.prepareStatement("SELECT * FROM Car.RentalAgreements WHERE id=?");
           psts.setInt(1,vehicleNumber);

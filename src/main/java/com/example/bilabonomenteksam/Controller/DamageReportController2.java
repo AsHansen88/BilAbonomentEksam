@@ -24,7 +24,7 @@ public class DamageReportController2 {
   }
   @GetMapping("damage")
   public DamageReportModel getDamageReport(@RequestParam int damageId) {
-    return damageReportService.GetDamageReportModel(damageId);
+    return damageReportService.getDamageReportModel(damageId);
 
   }
 

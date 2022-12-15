@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CarPriceCalculator {
 
-  public String CalculatePrice(List<RentalAgreementsModel> c){
+  public String calculatePrice(List<RentalAgreementsModel> c){
     var sum = 0;
     for(RentalAgreementsModel i: c){
       sum+= i.getPrice();

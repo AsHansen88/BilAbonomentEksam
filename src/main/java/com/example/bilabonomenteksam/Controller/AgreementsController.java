@@ -23,7 +23,7 @@ public class AgreementsController {
   }
 
     @GetMapping("aftale")
-    public RentalAgreementsModel getrentalagreement (@RequestParam int vehicleNumber){
-      return service2.GetRentalAgreementsModel(vehicleNumber);
+    public RentalAgreementsModel getRentalAgreement (@RequestParam int vehicleNumber){
+      return service2.getRentalAgreementsModel(vehicleNumber);
     }
 }

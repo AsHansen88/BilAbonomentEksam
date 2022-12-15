@@ -17,12 +17,12 @@ public class ArgumentsController2 {
 
 
   @GetMapping("/aftaler")
-  public String aftaler(){
+  public String agreements(){
     return "aftaler";
   }
 
   @PostMapping("/aftaler")
-  public String aftaler(WebRequest payload) {
+  public String agreements(WebRequest payload) {
     service2.createRentalAgreement(payload);
     Date startDate = Date.valueOf(payload.getParameter("startDate"));
     Date endDate = Date.valueOf(payload.getParameter("endDate"));

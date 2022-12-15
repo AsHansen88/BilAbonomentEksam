@@ -19,7 +19,7 @@ public class DamageReportService {
     return damageRepo.getAllDamageReports();
   }
 
-  public DamageReportModel GetDamageReportModel(int damageId) {
+  public DamageReportModel getDamageReportModel(int damageId) {
     return damageRepo.getDamageReportModel(damageId);
   }
 

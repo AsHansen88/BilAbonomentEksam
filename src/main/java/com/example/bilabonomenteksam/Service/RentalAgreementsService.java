@@ -16,8 +16,8 @@ public class RentalAgreementsService {
     return repo.getallCaragreements();
   }
 
-  public RentalAgreementsModel GetRentalAgreementsModel(int vehicleNumber){
-    return repo.GetRentalAgreementsModel(vehicleNumber);
+  public RentalAgreementsModel getRentalAgreementsModel(int vehicleNumber){
+    return repo.getRentalAgreementsModel(vehicleNumber);
   }
 
   public void createRentalAgreement(WebRequest req){

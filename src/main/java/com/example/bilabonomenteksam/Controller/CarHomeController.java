@@ -28,7 +28,7 @@ public class CarHomeController {
     return"index";
   }
   @GetMapping("/udvalg")
-  public String alleBiler(Model model){
+  public String allCars(Model model){
     model.addAttribute("udvalgt", carRepo.getAllCar());
     return "udvalg";
   }
@@ -36,7 +36,7 @@ public class CarHomeController {
   @GetMapping("/ListOfAgreements")
   public String allAgreements(Model model){
     model.addAttribute("Aftaler", service.getAllCarAgreements());
-    model.addAttribute("sum", carPrice.CalculatePrice(repoagreement.getallCaragreements()));
+    model.addAttribute("sum", carPrice.calculatePrice(repoagreement.getallCaragreements()));
     return "ListOfAgreements";
   }
 
