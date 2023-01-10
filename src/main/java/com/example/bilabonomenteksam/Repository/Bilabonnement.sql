@@ -72,3 +72,4 @@ SELECT * FROM DamageReports;
 DROP DATABASE Car;
 DROP TABLE ListOfCars;
 DROP TABLE RentalAgreements;
+DROP TABLE DamageReports;

@@ -17,9 +17,9 @@ public class DBConnect {
 //Metoder
 
   public static Connection getConnection(){
-    hostname = "jdbc:mysql://test2022.mysql.database.azure.com/kea";
-    username = "AsHansen88";
-    password = "191188Anders";
+    hostname = "jdbc:mysql://jonstestserver.mysql.database.azure.com";
+    username = "jonx1183";
+    password = "Wolf1712";
 
     try{
 
